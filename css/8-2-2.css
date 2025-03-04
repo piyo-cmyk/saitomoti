@@ -1,0 +1,8 @@
+/*== ヘッダー追従のためのCSS */
+#header {
+  position: fixed; /*追従ナビのためpositionをfixedにする*/
+  top: 0; /*ポジション設定topを0*/
+  height: 120px; /*headerの高さを指定*/
+  width: 100%; /*position:fixed;にしたため、横幅100%を設定*/
+}
+

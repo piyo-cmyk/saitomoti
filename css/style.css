@@ -1,0 +1,676 @@
+@charset "utf-8";
+/* 共通部分 */
+body {
+  color: #333;
+  font-size: 100%;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  overflow-x: clip;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+a {
+  margin: 0;
+}
+
+/* 各セレクタ */
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+}
+h1 {
+  font-size: 48px;
+  font-family: "Zen kaku Gothic New";
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-feature-settings: "pkna";
+  color: #4e524f;
+}
+h2 {
+  font-size: 48px;
+  font-family: "Poppins";
+  font-weight: 700;
+  line-height: 1;
+}
+li {
+  list-style: none;
+  font-size: 16px;
+  font-family: "Noto Sans JP";
+  font-weight: 400;
+  font-feature-settings: "palt";
+}
+a {
+  font-size: 16px;
+  font-family: "Noto Sans";
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none;
+  color: #75b3e0;
+}
+
+.link:link {
+  color: #75b3e0;
+}
+.link:visited {
+  color: #e07578;
+}
+.link:hover {
+  text-decoration: underline;
+}
+
+.link:active {
+  opacity: 0.8;
+}
+
+/* 各クラス要素 */
+.category {
+  font-size: 28px;
+  font-family: "PT sans";
+  font-weight: 400;
+  font-feature-settings: "palt";
+  letter-spacing: 0.04em;
+}
+.tt,
+.white {
+  font-size: 24px;
+  font-family: "PT sans";
+  font-weight: 400;
+  font-feature-settings: "palt";
+  letter-spacing: 0.06em;
+}
+/* レイアウト調整用 */
+.space {
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+/* 日本語 */
+.item-title {
+  font-size: 12px;
+  font-family: "Zen kaku Gothic New";
+  font-weight: 500;
+  font-feature-settings: "palt";
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  color: #4e524f;
+}
+.description {
+  font-size: 20px;
+  font-family: "Zen kaku Gothic New";
+  font-weight: 500;
+  font-feature-settings: "palt";
+  letter-spacing: 0.16em;
+  color: #4e524f;
+}
+.item-name {
+  font-size: 20px;
+  font-family: "Zen kaku Gothic New";
+  font-weight: 500;
+  font-feature-settings: "palt";
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+  color: #4e524f;
+}
+.text {
+  font-size: 16px;
+  font-family: "Noto sans", "Noto Sans JP";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: 0.08em;
+  font-feature-settings: "palt";
+}
+.bold {
+  font-size: 16px;
+  font-family: "Noto sans", "Noto Sans JP";
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: 0.18em;
+  font-feature-settings: "palt";
+}
+
+/* レイアウト指定 */
+
+/* -----header----- */
+header {
+  width: 100%;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.6);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.header-inner {
+  width: 1000px;
+  max-width: 96%;
+  height: 120px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 180px;
+  height: 80px;
+}
+
+.menu-nav {
+  display: flex;
+  column-gap: 80px;
+}
+.menu-nav li {
+  padding: 4px 8px;
+}
+
+.nav {
+  font-size: 32px;
+  line-height: 1.4;
+  font-family: "PT sans";
+  font-weight: 700;
+  color: #4e524f;
+  letter-spacing: 0.04em;
+}
+.anime {
+  color: transparent;
+  -webkit-text-stroke: 1px #4e524f;
+  transition: color 0.4s, -webkit-text-stroke-color 0.4s;
+}
+.anime:hover {
+  color: #4e524f;
+  -webkit-text-stroke-color: transparent;
+}
+
+/* ヘッダーロゴのみ */
+
+@media (width < 768px) {
+  .logo {
+    min-width: 80px;
+    min-height: 60px;
+  }
+  .nav {
+    font-size: 28px;
+  }
+  .menu-nav {
+    display: none;
+  }
+}
+
+/* -----header----- */
+
+/* メインビジュアル */
+.visual {
+  position: relative;
+  max-width: 100%;
+  background-image: url(/img/mainvisual.jpg);
+  background-size: cover;
+  background-color: #e4e4e4;
+  height: 100vh;
+  margin-bottom: 200px;
+}
+.layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.message {
+  width: 1000px;
+  margin: 0 auto;
+  max-width: 96%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.visual-text {
+  font-size: 16px;
+  font-family: "Noto Sans JP";
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.26em;
+  font-feature-settings: "palt";
+  max-width: 600px;
+  color: #4e524f;
+  text-shadow: 4px 4px 12px rgba(78, 82, 79, 0.2);
+}
+
+/* メインビジュアルの調整 */
+
+@media (width < 768px) {
+  .visual {
+    background-size: contain;
+    height: 80vh;
+  }
+  .visual-text {
+    font-size: 14px;
+  }
+  .layout {
+    margin-top: 80px;
+  }
+}
+
+/* コンテンツ共通部分 */
+.contents {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+.contents-title {
+  width: 1000px;
+  max-width: 96%;
+  margin: 0 auto;
+  color: #e07578;
+  display: flex;
+  align-items: baseline;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+.sub-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+.content-text {
+  font-size: 20px;
+  font-family: "Zen kaku Gothic New";
+  font-weight: 500;
+  font-feature-settings: "palt";
+  letter-spacing: 0.06em;
+  color: #e07578;
+}
+
+@media (width < 768px) {
+  .content-text {
+    font-size: 18px;
+  }
+  .sub-heading {
+    flex-direction: column;
+  }
+}
+
+/* -----Works----- */
+
+.works-picture {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 1000px;
+  max-width: 96%;
+  margin: 0 auto;
+}
+.works-picture a :hover{
+  opacity: 0.5;
+}
+
+/* Web */
+.web {
+  width: 100vw;
+  background-color: #f0faf0;
+  padding: 48px 0;
+}
+.web-wrapper {
+  width: 1000px;
+  max-width: 96%;
+  margin: 0 auto;
+}
+.w-preview {
+  margin-bottom: 48px;
+}
+
+.w-text {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+.side-text {
+  border-left: #4e524f solid 2px;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.tt {
+  margin-bottom: 8px;
+}
+.list {
+  font-size: 16px;
+  font-family: "Noto sans", "Noto Sans JP";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: 0.1em;
+  font-feature-settings: "palt";
+}
+
+.main-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.sub-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (width < 768px) {
+  .list {
+    font-size: 14px;
+  }
+  .w-text {
+    flex-direction: column;
+  }
+  .side-text {
+    flex-direction: row;
+    padding-left: 0;
+    border-left: 0 solid #000;
+  }
+  .preview-list {
+    display: none;
+  }
+}
+
+/* graphic */
+.graphic-wrapper {
+  padding: 96px 0;
+  width: 1000px;
+  max-width: 96%;
+  margin: 0 auto;
+}
+.g-production {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* others */
+.others {
+  background-color: #f0faf0;
+  padding: 48px 0;
+}
+.others-wrapper {
+  width: 1000px;
+  max-width: 96%;
+  margin: 0 auto;
+}
+
+.Slide-image {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* -----Works----- */
+
+/* Skill */
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  width: 1000px;
+  max-width: 96%;
+  margin: 0 auto;
+}
+
+.skillcolumn {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skill-title {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+}
+.white {
+  background-color: #333;
+  color: #fff;
+  padding: 8px 24px;
+}
+
+/* About me */
+.aboutme-wrapper {
+  width: 100%;
+  background-color: #f0faf0;
+  padding: 48px 0;
+}
+.profile-wrapper {
+  width: 1000px;
+  max-width: 96%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+.profile-picture img {
+  min-width: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.profile-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.long {
+  line-height: 2;
+}
+@media (width < 768px) {
+  .profile-wrapper {
+    flex-direction: column;
+  }
+}
+
+/* Like */
+.like-wrapper {
+  width: 1000px;
+  max-width: 96%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  margin-bottom: 64px;
+}
+.like-column {
+  display: flex;
+}
+.like-title {
+  width: 160px;
+  padding-right: 32px;
+  border-right: 1px solid #e07578;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.like-text {
+  padding-left: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.color {
+  color: #e07578;
+}
+
+.like-photo {
+  display: flex;
+  justify-content: space-between;
+}
+.like-photo img {
+  width: 45%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (width < 768px) {
+  .like-column {
+    flex-direction: column;
+  }
+  .like-title {
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-right: none;
+    border-bottom: 1px solid #e07578;
+    align-items: baseline;
+  }
+  .like-text {
+    padding: 0;
+    gap: 8px;
+  }
+  .like-photo {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+/* personality */
+.personality-wrapper {
+  width: 1000px;
+  max-width: 96%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  margin-bottom: 64px;
+}
+.p-text {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+/* Thank you */
+.thankyou {
+  width: 1000px;
+  max-width: 96%;
+  margin: 0 auto;
+  margin-bottom: 240px;
+}
+
+.thankyou-title {
+  width: 100%;
+  margin: 0 auto;
+  color: #e07578;
+  display: flex;
+  align-items: baseline;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+.mail {
+  color: #e07578;
+  font-size: 28px;
+}
+.mail:hover {
+  opacity: 0.6;
+}
+
+/* -----footer----- */
+
+footer {
+  width: 100%;
+  background-color: #e07578;
+  text-align: center;
+  padding: 8px 0;
+}
+.item-text {
+  font-size: 20px;
+  font-family: "Zen kaku Gothic New";
+  font-weight: 500;
+  font-feature-settings: "palt";
+  letter-spacing: 0.06em;
+  color: #4e524f;
+}
+small {
+  color: #fff;
+  font-size: 14px;
+  font-family: "Noto sans";
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+@media (width < 768px) {
+  .item-text {
+    font-size: 16px;
+  }
+  small {
+    font-size: 12px;
+  }
+}
+
+/* フォントサイズの調整 */
+@media (width < 768px) {
+  h1,
+  h2 {
+    font-size: 32px;
+  }
+
+  li {
+    font-size: 14px;
+  }
+  a {
+    font-size: 14px;
+  }
+  img {
+    width: 100%;
+  }
+  .category {
+    font-size: 24px;
+  }
+  .tt,
+  .white {
+    font-size: 20px;
+  }
+  .description,
+  .item-name {
+    font-size: 16px;
+  }
+  .text,
+  .bold {
+    font-size: 14px;
+  }
+
+  /* 横幅余白調整 */
+  .header-inner,
+  .message,
+  .contents-title,
+  .works-wrapper,
+  .works-picture,
+  .web-wrapper,
+  .graphic-wrapper,
+  .others-wrapper,
+  .skill-list,
+  .profile-wrapper,
+  .like-wrapper,
+  .personality-wrapper,
+  .thankyou {
+    max-width: 90%;
+  }
+}
